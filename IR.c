@@ -1,3 +1,17 @@
+/******************************************************************************
+ * Name:    		IR.c
+ * Description: 	Implementation of IR sensor, Front, Back, Left and Right.
+ * Version: 		Version 1.00
+ * Authors: 		Gunjeet Dhaliwal | Mckenzie Busenius
+ *
+ * This software is supplied "AS IS" without warranties of any kind.
+ *
+ *
+ *----------------------------------------------------------------------------
+ * History:
+ *          V1.00 Initial Version
+ *          
+ *****************************************************************************/
 #include "stm32f10x.h"
 #include "IR.h"
 #include "LCD.h"
