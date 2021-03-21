@@ -1,6 +1,6 @@
 /******************************************************************************
-* Name: 				motion_Sensor.c
-* Description: 	Header File
+* Name: 				infrared_Sensor.c
+* Description: 	Detects any nearby obstacles
 * Version: 			Version 1.00
 * Authors: 			Gunjeet Dhaliwal
 *
@@ -16,7 +16,7 @@
 #include "infrared_sensor.h"
 #include "LCD.h"
 
-void start_IR(void){
+void start_Motion_Sensor(void){
 	obstacle_Test();
 }
 
