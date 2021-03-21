@@ -16,10 +16,6 @@
 #include "infrared_sensor.h"
 #include "LCD.h"
 
-void start_Motion_Sensor(void){
-	obstacle_Test();
-}
-
 int obstacle_Test(void){
 	if((GPIOB->IDR & GPIO_IDR_IDR4) != GPIO_IDR_IDR4)	
 		return 0;
