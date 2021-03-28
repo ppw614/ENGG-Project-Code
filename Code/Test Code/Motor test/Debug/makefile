@@ -61,8 +61,8 @@ all: main-build
 main-build: Motor\ Test.elf secondary-outputs
 
 # Tool invocations
-Motor\ Test.elf: $(OBJS) $(USER_OBJS) D:\school\ stuff\ENGG-Project-Code\Motor\ test\STM32F103RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Motor Test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\school stuff\ENGG-Project-Code\Motor test\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Motor Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Motor\ Test.elf: $(OBJS) $(USER_OBJS) D:\school\ stuff\ENGG-Project-Code\Code\Test\ Code\Motor\ test\STM32F103RBTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Motor Test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\school stuff\ENGG-Project-Code\Code\Test Code\Motor test\STM32F103RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Motor Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
