@@ -1,0 +1,74 @@
+/*
+ * random
+ *
+ *  Created on: Apr 1, 2021
+ *      Author: prwan
+ */
+Pseudo Code for Primary Microcontroller (STMF103RB)
+int state = 1; //initialize state variable as 1
+if(state==1) {
+//Do nothing for 5 minutes
+//turn off UVC light
+	HAL_GPIO_WritePin(PA_8, RESET);
+	timeValue=0;
+	setTIMERVALUE(&tim4,0);
+	while(timeValue<300)//takes 300secs waiting
+	ticks= getTIMERVALUE(&tim4);
+	if(ticks>100) {
+		timerValue++;}
+
+	if(pinC_9 is high) { //pinC_9 flag showing if robot has finished operation
+		state=1;//stay in state 1
+	}
+	else {
+		state=2;
+	}
+}
+if(state==2) {
+	Motors_stp();
+	timeValue=0;
+	setTIMERVALUE(&tim4,0);
+	while(timeValue<6) //takes 6secs checking the motion sensors
+	if(PB10|| PB15|| PA10||PB3) { //inputs from the motion sensors
+		state=1;
+		timerValue=7;
+	}
+
+	ticks= getTIMERVALUE(&tim4);
+	if(ticks>100) {
+		timerValue++;}
+	if(pinC_4 is high) { //pinC_4 flag showing robot mode forward movement or //backward
+		state=2;//stay in state 1
+	}
+	else {
+		state=2;}
+}
+}
+
+If(state==3) {
+Motors_Fw();
+timeValue=0;
+setTIMERVALUE(&tim4,0);
+while(timeValue<5) { //takes 5secs moving
+	if(timeValue==0|| timeValue==3) { //checks ultrasonic and ir sensors
+		frontDistance=ultraSonicF();//get distance from  front ultrasonic
+		rightDistance=ultraSonicR();//get distance from right side ultrasonic
+		leftDistance=ultraSonicL();//get distance from left side ultrasonic
+		if(frontDistance<obstDistance) {
+			if(rightDistance<obstDistance)
+			{
+				state=5;
+				timeValue=6
+			}
+			if(lefttDistance<obstDistance)
+			{
+				state=4;
+				timeValue=6
+			}
+
+		}
+	}
+	if(!P)
+}
+}
+
