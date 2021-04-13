@@ -15,6 +15,28 @@
  *state 6 minor right turn
  *state 7 big left turn
  *state 8 move robot in reverse
+ **Port mapping
+ *Motion Sensors(F,R,L,B)
+ *Inputs - PB10, PB15, PA10, PB3
+ *Ultrasonic Sensors(F,R,L,B)
+ *Triggers/Outputs- PC1, PC0, PC2, PC3
+ *Echo/Inputs - PB5, PB4, PB14, PB13
+ *Infrared sensors(FR, FL, BR, Bl)
+ *Inputs-PA0, PA1, PA4, PB0
+ *Motors
+ *motors are controlled by another microcontorller
+ *so the following ports are mutually exclusive
+ *foward movement-PC11
+ *turing right-PC10
+ *turning left - PB12
+ *backward movement- PB11
+ *stop - PC12
+ *pin used to sense if cable is still there
+ *winch pin - PC4
+ *pin used to indicate end operation
+ *end operation - PC9 
+ *Light Control
+ *PA9 high light is off
  ******************************************************************************
  */
 /* USER CODE END Header */
