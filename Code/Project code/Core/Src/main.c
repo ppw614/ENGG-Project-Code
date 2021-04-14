@@ -1,11 +1,15 @@
 /* USER CODE BEGIN Header */
 /**
  ******************************************************************************
- * @Authors         : Wangwe Paul |Gunjeet Dhaliwal | Gurinder Brar | Vitalii Andriievskyi
+ * @Authors        : Wangwe Paul |Gunjeet Dhaliwal | Gurinder Brar | Vitalii Andriievskyi
  * @file           : main.c
  * @brief          : Main program body
+ * @Version	   : Version 1.0 - Rough code for the robot to move.
+ 		   : Version 1.1 - Coordination between motors and sensors was unsuccessful.
+		   : Version 1.2 - Implementation and communincation between the two microcontrollers.
+		   : Version 1.3 - The final version. Calibrating the sensors and motors all together.
  ******************************************************************************
- *Purpose: code used on semi-Autonomous UVC disinfectant robot
+ *Purpose: code used for the Semi-Autonomous UV-C Disinfectant Robot
  *Works like a state machine
  *state 1 idle state
  *state 2 check for motion
@@ -43,12 +47,12 @@
  *turning left      - PB12
  *backward movement - PB11
  *stop              - PC12
- *pin used to sense if cable is still there
+ *pin used to sense if the extension cord is winding/unwinding.
  *winch pin         - PC4
- *pin used to indicate end operation
+ *pin used to indicate when the task to disinfect is complete.
  *end operation     - PC9 
  *Light Control
- *PA9 high light is off
+ *When PA9 is high(motion detected, the UV-c light turns off
  ******************************************************************************
  */
 /* USER CODE END Header */
