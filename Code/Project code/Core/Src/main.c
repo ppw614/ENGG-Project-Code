@@ -1,7 +1,7 @@
 /* USER CODE BEGIN Header */
 /**
  ******************************************************************************
- * @Author         : Wangwe Paul with help from fellow group mates
+ * @Authors         : Wangwe Paul |Gunjeet Dhaliwal | Gurinder Brar | Vitalii Andriievskyi
  * @file           : main.c
  * @brief          : Main program body
  ******************************************************************************
