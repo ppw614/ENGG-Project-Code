@@ -1,7 +1,7 @@
 /* USER CODE BEGIN Header */
 /**
  ******************************************************************************
- * @Authors        : Wangwe Paul |Gunjeet Dhaliwal | Gurinder Brar | Vitalii Andriievskyi
+ * @Authors        : Wangwe Paul | Gunjeet Dhaliwal | Gurinder Brar | Vitalii Andriievskyi
  * @file           : main.c
  * @brief          : Main program body
  * @Version	   : Version 1.0 - Rough code for the robot to move.
